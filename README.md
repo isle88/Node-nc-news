@@ -33,7 +33,7 @@ https://hyunjungs-nc-news.herokuapp.com/api/
 ### How to run
 
 - **This project needs minimum version of Node v17.01 & Postgres v12.9**
-- Clone the be-nc-news repo `https://github.com/isle88/Node-nc-news.git`
+- Clone the be-nc-news repo `https://github.com/isle88/node-nc-news.git`
 - Run npm i to install the dependencies
 - You need to create .env.test & .env.development
 
