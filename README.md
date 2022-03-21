@@ -35,14 +35,27 @@ https://hyunjungs-nc-news.herokuapp.com/api/
 - **This project needs minimum version of Node v17.01 & Postgres v12.9**
 - Clone the be-nc-news repo `https://github.com/isle88/node-nc-news.git`
 - Run npm i to install the dependencies
-- You need to create .env.test & .env.development
+- You need to create .env files
+```
+.env.test =>  PGDATABASE=nc_news_test
+.env.development =>  PGDATABASE=nc_news
+```
 
 
 ### Seeding local database
 
-- npm run seed
+- Open PSQL on your terminal
+- Enter this script to drop and create on your local database
+```
+    DROP DATABASE IF EXISTS nc_news_test;
+    DROP DATABASE IF EXISTS nc_news;
+
+    CREATE DATABASE nc_news_test;
+    CREATE DATABASE nc_news;
+```
 
 
 ### To run tests
 
-- npm run test
+- npm test
+- npm test app / npm test utils
