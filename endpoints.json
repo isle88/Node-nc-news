@@ -1,0 +1,268 @@
+{
+  "GET /api": {
+    "description": "serves up a json representation of all the available endpoints of the api"
+  },
+  "GET /api/topics": {
+    "description": "serves an array of all topics",
+    "queries": [],
+    "exampleResponse": {
+      "topics": [{ "slug": "football", "description": "Footie!" }]
+    }
+  },
+  "GET /api/articles/:article_id": {
+    "description": "serves an array of article by article_id",
+    "queries": [],
+    "exampleResponse": {
+      "article": {
+        "article_id": 1,
+        "title": "Running a Node App",
+        "body": "This is part two of a series on how to get up and running with Systemd and Node.js. This part dives deeper into how to successfully run your app with systemd long-term, and how to set it up in a production environment.",
+        "votes": 0,
+        "topic": "coding",
+        "author": "jessjelly",
+        "created_at": "2020-11-07T06:03:00.000Z",
+        "comment_count": "8"
+      }
+    }
+  },
+  "PATCH /api/articles/:article_id": {
+    "description": "patch votes and serves an array of article by article_id",
+    "queries": [],
+    "exampleResponse": {
+      "article": {
+        "article_id": 1,
+        "title": "Running a Node App",
+        "body": "This is part two of a series on how to get up and running with Systemd and Node.js. This part dives deeper into how to successfully run your app with systemd long-term, and how to set it up in a production environment.",
+        "votes": 2,
+        "topic": "coding",
+        "author": "jessjelly",
+        "created_at": "2020-11-07T06:03:00.000Z"
+      }
+    }
+  },
+
+  "GET /api/articles": {
+    "description": "serves an array of all articles sort_by created_at, order DESC and topic coding",
+    "exampleResponse": {
+      "articles": [
+        {
+          "author": "tickle122",
+          "title": "The battle for Node.js security has only begun",
+          "article_id": 12,
+          "topic": "coding",
+          "created_at": "2020-11-15T13:25:00.000Z",
+          "votes": 0,
+          "comment_count": "7"
+        },
+        {
+          "author": "grumpy19",
+          "title": "JavaScript’s Apply, Call, and Bind Methods are Essential for JavaScript Professionals",
+          "article_id": 6,
+          "topic": "coding",
+          "created_at": "2020-11-11T15:09:00.000Z",
+          "votes": 0,
+          "comment_count": "11"
+        },
+        {
+          "author": "jessjelly",
+          "title": "Running a Node App",
+          "article_id": 1,
+          "topic": "coding",
+          "created_at": "2020-11-07T06:03:00.000Z",
+          "votes": 0,
+          "comment_count": "8"
+        },
+        {
+          "author": "tickle122",
+          "title": "Using React Native: One Year Later",
+          "article_id": 7,
+          "topic": "coding",
+          "created_at": "2020-10-18T00:26:00.000Z",
+          "votes": 0,
+          "comment_count": "8"
+        },
+        {
+          "author": "cooljmessy",
+          "title": "Express.js: A Server-Side JavaScript Framework",
+          "article_id": 8,
+          "topic": "coding",
+          "created_at": "2020-10-05T22:23:00.000Z",
+          "votes": 0,
+          "comment_count": "7"
+        },
+        {
+          "author": "jessjelly",
+          "title": "Making sense of Redux",
+          "article_id": 4,
+          "topic": "coding",
+          "created_at": "2020-09-11T20:12:00.000Z",
+          "votes": 0,
+          "comment_count": "9"
+        },
+        {
+          "author": "tickle122",
+          "title": "Designing Better JavaScript APIs",
+          "article_id": 11,
+          "topic": "coding",
+          "created_at": "2020-07-06T23:13:00.000Z",
+          "votes": 0,
+          "comment_count": "5"
+        },
+        {
+          "author": "cooljmessy",
+          "title": "An Introduction to JavaScript Object Notation (JSON) in JavaScript and .NET",
+          "article_id": 10,
+          "topic": "coding",
+          "created_at": "2020-07-02T11:23:00.000Z",
+          "votes": 0,
+          "comment_count": "8"
+        },
+        {
+          "author": "grumpy19",
+          "title": "Learn HTML5, CSS3, and Responsive WebSite Design in One Go",
+          "article_id": 9,
+          "topic": "coding",
+          "created_at": "2020-05-26T14:06:00.000Z",
+          "votes": 0,
+          "comment_count": "8"
+        },
+        {
+          "author": "jessjelly",
+          "title": "The Rise Of Thinking Machines: How IBM's Watson Takes On The World",
+          "article_id": 2,
+          "topic": "coding",
+          "created_at": "2020-05-14T00:02:00.000Z",
+          "votes": 0,
+          "comment_count": "6"
+        },
+        {
+          "author": "jessjelly",
+          "title": "Please stop worrying about Angular 3",
+          "article_id": 5,
+          "topic": "coding",
+          "created_at": "2020-04-21T16:06:00.000Z",
+          "votes": 1,
+          "comment_count": "6"
+        },
+        {
+          "author": "happyamy2016",
+          "title": "22 Amazing open source React projects",
+          "article_id": 3,
+          "topic": "coding",
+          "created_at": "2020-02-29T11:12:00.000Z",
+          "votes": 4,
+          "comment_count": "10"
+        }
+      ]
+    },
+    "queries": ["sort_by", "order", "topic"]
+  },
+
+  "PATCH /api/articles/:article_id": {
+    "description": "patch votes and serves an array of article by article_id",
+    "queries": [],
+    "exampleResponse": {
+      "article": {
+        "article_id": 1,
+        "title": "Running a Node App",
+        "body": "This is part two of a series on how to get up and running with Systemd and Node.js. This part dives deeper into how to successfully run your app with systemd long-term, and how to set it up in a production environment.",
+        "votes": 2,
+        "topic": "coding",
+        "author": "jessjelly",
+        "created_at": "2020-11-07T06:03:00.000Z"
+      }
+    }
+  },
+
+  "GET /api/articles/:article_id/comments": {
+    "description": "serves an array of comment by article_id",
+    "queries": [],
+    "exampleResponse": {
+      "article": {
+        "comments": [
+          {
+            "comment_id": 31,
+            "votes": 11,
+            "created_at": "2020-09-26T16:16:00.000Z",
+            "author": "weegembump",
+            "body": "Sit sequi odio suscipit. Iure quisquam qui alias distinctio eos officia enim aut sit. Corrupti ut praesentium ut iste earum itaque qui. Dolores in ab rerum consequuntur. Id ab aliquid autem dolore."
+          },
+          {
+            "comment_id": 33,
+            "votes": 4,
+            "created_at": "2019-12-31T21:21:00.000Z",
+            "author": "cooljmessy",
+            "body": "Explicabo perspiciatis voluptatem sunt tenetur maxime aut. Optio totam modi. Perspiciatis et quia."
+          },
+          {
+            "comment_id": 44,
+            "votes": 4,
+            "created_at": "2020-06-15T15:13:00.000Z",
+            "author": "grumpy19",
+            "body": "Error est qui id corrupti et quod enim accusantium minus. Deleniti quae ea magni officiis et qui suscipit non."
+          }
+        ]
+      }
+    }
+  },
+
+  "POST /api/articles/:article_id/comments": {
+    "description": "post an object and serves an array of comment",
+    "queries": [],
+    "exampleResponse": {
+      "comment": {
+        "comment_id": 19,
+        "author": "lurker",
+        "article_id": 1,
+        "votes": 0,
+        "created_at": "2022-02-06T21:17:18.122Z",
+        "body": "hello"
+      }
+    }
+  },
+
+  "DELETE /api/comments/:comment_id": {
+    "description": "delete comments by comment_id",
+    "queries": [],
+    "exampleResponse": { "msg": "Not found" }
+  },
+
+  "GET /api/users": {
+    "description": "serves an array of all usernames",
+    "exampleResponse": {
+      "users": [{ "username": "tickle122" }]
+    },
+    "queries": []
+  },
+
+  "GET /api/users/:username": {
+    "description": "serves an array of user by username",
+    "exampleResponse": {
+      "username": [
+        {
+          "username": "tickle122",
+          "avatar_url": "https://vignette.wikia.nocookie.net/mrmen/images/d/d6/Mr-Tickle-9a.png/revision/latest?cb=20180127221953",
+          "name": "Tom Tickle"
+        }
+      ]
+    },
+    "queries": []
+  },
+
+  "PATCH /api/comments/:comment_id": {
+    "description": "patch votes and serves an array of comments by comment_id",
+    "queries": [],
+    "exampleResponse": {
+      "comment": [
+        {
+          "comment_id": 20,
+          "author": "happyamy2016",
+          "article_id": 13,
+          "votes": 1,
+          "created_at": "2020-04-07T04:19:00.000Z",
+          "body": "Libero explicabo aperiam esse quae. Dolores in ipsum vitae incidunt. Magnam ullam nihil voluptas enim veritatis et nobis architecto."
+        }
+      ]
+    }
+  }
+}
