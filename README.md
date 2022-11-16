@@ -27,7 +27,7 @@ GET /api
 
 ## Hosted version
 
-https://hyunjungs-nc-news.herokuapp.com/api/
+https://hyunjung-kim.cyclic.app/api
 
 
 ### How to run
