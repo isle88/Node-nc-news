@@ -1,4 +1,4 @@
-# BE-NC-NEWS
+# NODE-NC-NEWS
 
 This project builds API endpoints (such as reddit). Its objective is to simulate the a real backend service that provides information to the front end architecture.
 
